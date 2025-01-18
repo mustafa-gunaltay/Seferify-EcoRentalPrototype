@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<dfa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="dfa_schema.xsd">
+	<states>
+		<state id="start" initial="true" description="Start state of the DFA"/>
+		<state id="search_vehicle" description="Searching vehicle based on customer requirements"/>
+		<state id="check_availability" description="Checking the availability of the found vehicle"/>
+		<state id="check_customer" description="Checking customer's name, age, and license eligibility"/>
+		<state id="reservation" description="Making a reservation for the vehicle"/>
+		<state id="payment" description="Payment page for the vehicle rental"/>
+		<state id="send_details" description="Sending vehicle pickup details to the customer"/>
+		<state id="customer_location" description="Customer arrives at the vehicle location"/>
+		<state id="request_form" description="Requesting customer to fill the vehicle handover form"/>
+		<state id="rented" description="Vehicle rented successfully"/>
+		<state id="not_rented" description="Vehicle not rented"/>
+		<state id="refund" description="50% refund of the payment"/>
+	</states>
+	<transitions>
+		<transition from="start" to="search_vehicle" input="0" action="searchVehicle"/>
+		<transition from="search_vehicle" to="check_availability" input="1" action="checkAvailability"/>
+		<transition from="check_availability" to="not_rented" input="0" action="vehicleNotAvailable"/>
+		<transition from="check_availability" to="check_customer" input="1" action="checkCustomerEligibility"/>
+		<transition from="check_customer" to="not_rented" input="0" action="customerNotEligible"/>
+		<transition from="check_customer" to="reservation" input="1" action="makeReservation"/>
+		<transition from="reservation" to="payment" input="0" action="goToPayment"/>
+		<transition from="reservation" to="send_details" input="1" action="sendPickupDetails"/>
+		<transition from="payment" to="refund" input="0" action="initiateRefund"/>
+		<transition from="payment" to="send_details" input="1" action="paymentSuccess"/>
+		<transition from="send_details" to="customer_location" input="1" action="customerArrives"/>
+		<transition from="customer_location" to="not_rented" input="0" action="customerNoShow"/>
+		<transition from="customer_location" to="request_form" input="1" action="requestForm"/>
+		<transition from="request_form" to="rented" input="0" action="formFilled"/>
+	</transitions>
+	<acceptingStates>
+		<state id="rented"/>
+		<state id="not_rented"/>
+	</acceptingStates>
+</dfa>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Customers>
+  <Customer>
+    <Ad>adsda</Ad>
+    <Soyad>sadas</Soyad>
+    <Yas>45</Yas>
+    <TCNumarasi>-1773790777</TCNumarasi>
+    <Ehliyet>true</Ehliyet>
+    <Araba>TOGG - T10X - 2024 - 1</Araba>
+    <TarihveTumYarimGun>28.06.2024 21:36:52 - Tam Gun</TarihveTumYarimGun>
+  </Customer>
+  <Customer>
+    <Ad>dasadasd</Ad>
+    <Soyad>sadasd</Soyad>
+    <Yas>34</Yas>
+    <TCNumarasi>-1773790777</TCNumarasi>
+    <Ehliyet>true</Ehliyet>
+    <Araba>Citroen - Ami - 2022 - 3</Araba>
+    <TarihveTumYarimGun>18.01.2025 20:03:01 - Tam Gun</TarihveTumYarimGun>
+  </Customer>
+  <Customer>
+    <Ad>dsasd</Ad>
+    <Soyad>sdaasd</Soyad>
+    <Yas>34</Yas>
+    <TCNumarasi>-1773790777</TCNumarasi>
+    <Ehliyet>true</Ehliyet>
+    <Araba>Mercedes - EQE - 2024 - 1</Araba>
+    <TarihveTumYarimGun>18.01.2025 21:05:21 - Yarım Gun</TarihveTumYarimGun>
+  </Customer>
+  <Customer>
+    <Ad>John</Ad>
+    <Soyad>Doe</Soyad>
+    <Yas>36</Yas>
+    <TCNumarasi>-539222978</TCNumarasi>
+    <Ehliyet>true</Ehliyet>
+    <Araba>Volkswagen - ID.3 - 2023 - 1</Araba>
+    <TarihveTumYarimGun>18.01.2025 21:20:45 - Tam Gun</TarihveTumYarimGun>
+  </Customer>
+</Customers>
